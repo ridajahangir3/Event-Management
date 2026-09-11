@@ -1,10 +1,12 @@
-```php
 <?php
 
 ob_start();
-session_start();
 
 require_once "db.php";
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 $error = "";
 
@@ -425,4 +427,3 @@ button:hover {
 </body>
 
 </html>
-```
