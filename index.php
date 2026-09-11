@@ -1,6 +1,4 @@
-```php
 <?php
-session_start();
 ?>
 
 <!DOCTYPE html>
@@ -685,4 +683,3 @@ h1 {
 </body>
 
 </html>
-```
