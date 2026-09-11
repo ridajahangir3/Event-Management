@@ -1,6 +1,6 @@
-```php
 <?php
 
+ob_start();
 session_start();
 
 require_once "db.php";
@@ -33,20 +33,11 @@ if (isset($_POST["enter_hub"])) {
 
 <style>
 
-/* =========================
-   RESET
-========================= */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
-/* =========================
-   BODY
-========================= */
 
 body {
 
@@ -80,11 +71,6 @@ body {
     overflow: hidden;
 }
 
-
-/* =========================
-   BACKGROUND DECORATION
-========================= */
-
 body::before {
 
     content: "";
@@ -104,7 +90,6 @@ body::before {
     left: -100px;
 }
 
-
 body::after {
 
     content: "";
@@ -123,11 +108,6 @@ body::after {
 
     right: -90px;
 }
-
-
-/* =========================
-   LOGIN CARD
-========================= */
 
 .login-card {
 
@@ -150,11 +130,6 @@ body::after {
     box-shadow:
         0 25px 70px rgba(91, 72, 130, .14);
 }
-
-
-/* =========================
-   LOGO
-========================= */
 
 .logo {
 
@@ -187,11 +162,6 @@ body::after {
         0 12px 25px rgba(153, 125, 211, .20);
 }
 
-
-/* =========================
-   SMALL TITLE
-========================= */
-
 .small-title {
 
     color: #9278c7;
@@ -207,11 +177,6 @@ body::after {
     margin-bottom: 10px;
 }
 
-
-/* =========================
-   HEADING
-========================= */
-
 h1 {
 
     color: #302849;
@@ -223,11 +188,6 @@ h1 {
     margin-bottom: 10px;
 }
 
-
-/* =========================
-   SUBTITLE
-========================= */
-
 .subtitle {
 
     color: #7d7890;
@@ -238,11 +198,6 @@ h1 {
 
     margin-bottom: 28px;
 }
-
-
-/* =========================
-   ERROR
-========================= */
 
 .error {
 
@@ -263,20 +218,10 @@ h1 {
     font-weight: 600;
 }
 
-
-/* =========================
-   INPUT GROUP
-========================= */
-
 .input-group {
 
     margin-bottom: 19px;
 }
-
-
-/* =========================
-   LABEL
-========================= */
 
 label {
 
@@ -290,11 +235,6 @@ label {
 
     margin-bottom: 8px;
 }
-
-
-/* =========================
-   INPUT
-========================= */
 
 input {
 
@@ -317,12 +257,10 @@ input {
     transition: .2s;
 }
 
-
 input::placeholder {
 
     color: #aaa5b7;
 }
-
 
 input:focus {
 
@@ -333,11 +271,6 @@ input:focus {
     box-shadow:
         0 0 0 4px rgba(179,154,223,.13);
 }
-
-
-/* =========================
-   LOGIN BUTTON
-========================= */
 
 button {
 
@@ -372,7 +305,6 @@ button {
         0 10px 25px rgba(146,120,199,.20);
 }
 
-
 button:hover {
 
     transform: translateY(-2px);
@@ -380,11 +312,6 @@ button:hover {
     box-shadow:
         0 14px 28px rgba(146,120,199,.27);
 }
-
-
-/* =========================
-   SECURITY NOTE
-========================= */
 
 .note {
 
@@ -407,11 +334,6 @@ button:hover {
     text-align: center;
 }
 
-
-/* =========================
-   BACK LINK
-========================= */
-
 .back {
 
     display: block;
@@ -431,16 +353,10 @@ button:hover {
     transition: .2s;
 }
 
-
 .back:hover {
 
     color: #7358a5;
 }
-
-
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width: 500px) {
 
@@ -462,37 +378,26 @@ button:hover {
 
 </head>
 
-
 <body>
 
-
 <div class="login-card">
-
-
-    <!-- LOGO -->
 
     <div class="logo">
         🎓
     </div>
 
-
-    <!-- TITLE -->
-
     <div class="small-title">
         College Event Hub
     </div>
-
 
     <h1>
         Welcome Back
     </h1>
 
-
     <p class="subtitle">
         Enter the College Event Hub administration panel
         and continue managing college events.
     </p>
-
 
     <form method="POST">
 
@@ -502,14 +407,10 @@ button:hover {
 
     </form>
 
-
     <div class="note">
         🔒 Local college access. No Gmail account
         or Gmail password is required.
     </div>
-
-
-    <!-- BACK -->
 
     <a
         href="index.php"
@@ -518,11 +419,8 @@ button:hover {
         ← Back to College Event Hub
     </a>
 
-
 </div>
-
 
 </body>
 
 </html>
-```
