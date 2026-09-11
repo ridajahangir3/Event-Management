@@ -1,3 +1,4 @@
+```php
 <?php
 
 ob_start();
@@ -20,7 +21,6 @@ if (isset($_POST["enter_hub"])) {
 ?>
 
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -68,7 +68,8 @@ body {
 
     position: relative;
 
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 body::before {
@@ -424,3 +425,4 @@ button:hover {
 </body>
 
 </html>
+```
