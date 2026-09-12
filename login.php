@@ -1,12 +1,11 @@
+```php
 <?php
 
 ob_start();
 
-require_once "db.php";
+session_start();
 
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+require_once "db.php";
 
 $error = "";
 
@@ -23,6 +22,7 @@ if (isset($_POST["enter_hub"])) {
 ?>
 
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -70,9 +70,9 @@ body {
 
     position: relative;
 
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
 }
+
 
 body::before {
 
@@ -93,6 +93,7 @@ body::before {
     left: -100px;
 }
 
+
 body::after {
 
     content: "";
@@ -111,6 +112,7 @@ body::after {
 
     right: -90px;
 }
+
 
 .login-card {
 
@@ -133,6 +135,7 @@ body::after {
     box-shadow:
         0 25px 70px rgba(91, 72, 130, .14);
 }
+
 
 .logo {
 
@@ -165,6 +168,7 @@ body::after {
         0 12px 25px rgba(153, 125, 211, .20);
 }
 
+
 .small-title {
 
     color: #9278c7;
@@ -180,6 +184,7 @@ body::after {
     margin-bottom: 10px;
 }
 
+
 h1 {
 
     color: #302849;
@@ -191,6 +196,7 @@ h1 {
     margin-bottom: 10px;
 }
 
+
 .subtitle {
 
     color: #7d7890;
@@ -201,6 +207,7 @@ h1 {
 
     margin-bottom: 28px;
 }
+
 
 .error {
 
@@ -221,10 +228,12 @@ h1 {
     font-weight: 600;
 }
 
+
 .input-group {
 
     margin-bottom: 19px;
 }
+
 
 label {
 
@@ -238,6 +247,7 @@ label {
 
     margin-bottom: 8px;
 }
+
 
 input {
 
@@ -260,10 +270,12 @@ input {
     transition: .2s;
 }
 
+
 input::placeholder {
 
     color: #aaa5b7;
 }
+
 
 input:focus {
 
@@ -274,6 +286,7 @@ input:focus {
     box-shadow:
         0 0 0 4px rgba(179,154,223,.13);
 }
+
 
 button {
 
@@ -308,6 +321,7 @@ button {
         0 10px 25px rgba(146,120,199,.20);
 }
 
+
 button:hover {
 
     transform: translateY(-2px);
@@ -315,6 +329,7 @@ button:hover {
     box-shadow:
         0 14px 28px rgba(146,120,199,.27);
 }
+
 
 .note {
 
@@ -337,6 +352,7 @@ button:hover {
     text-align: center;
 }
 
+
 .back {
 
     display: block;
@@ -356,10 +372,12 @@ button:hover {
     transition: .2s;
 }
 
+
 .back:hover {
 
     color: #7358a5;
 }
+
 
 @media (max-width: 500px) {
 
@@ -381,26 +399,33 @@ button:hover {
 
 </head>
 
+
 <body>
 
+
 <div class="login-card">
+
 
     <div class="logo">
         🎓
     </div>
 
+
     <div class="small-title">
         College Event Hub
     </div>
+
 
     <h1>
         Welcome Back
     </h1>
 
+
     <p class="subtitle">
         Enter the College Event Hub administration panel
         and continue managing college events.
     </p>
+
 
     <form method="POST">
 
@@ -410,10 +435,12 @@ button:hover {
 
     </form>
 
+
     <div class="note">
         🔒 Local college access. No Gmail account
         or Gmail password is required.
     </div>
+
 
     <a
         href="index.php"
@@ -422,8 +449,11 @@ button:hover {
         ← Back to College Event Hub
     </a>
 
+
 </div>
+
 
 </body>
 
 </html>
+```
